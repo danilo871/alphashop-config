@@ -33,9 +33,9 @@ eureka:
 # ==============================================================
 # = Security Parameters
 # ============================================================== 
-sicurezza:
-  userpwd: 'BimBumBam_2018'
-  adminpwd: 'MagicaBula_2018'  
+  sicurezza:
+    userpwd: 'BimBumBam_2018'
+    adminpwd: 'MagicaBula_2018'  
   
 # ==============================================================
 # = Logs Parameters
