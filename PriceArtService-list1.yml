@@ -1,0 +1,33 @@
+#Application Config
+application:
+  listino: 1
+#=========================================
+#= Actuator Parameters
+#=========================================
+management:
+    info:
+     env:
+       enabled: true
+     git:
+       enabled: true
+       mode: full
+    endpoint:
+      health:
+        show-details: WHEN_AUTHORIZED
+    endpoints:
+      web:
+        exposure:
+          include: health, info, metrics
+          
+#=========================================
+#= Actuator Info
+#=========================================          
+info:
+  assistenza:
+    name: Danilo Scancella
+    mail: danilo.scancella@gmail.com
+    telefono: 339-12345678
+    orario: 9-20
+  nome:
+    nome-app: PriceArt Web Service - Autenticazione OAUTH" keycloak
+  profilo: GitHub  
