@@ -1,3 +1,4 @@
+spring:
 # ==============================================================
 # = Eureka Parameters
 # ==============================================================  
@@ -26,20 +27,15 @@ eureka:
     registerWithEureka: false
     #Non esegue la cache in locale 
     fetchRegistry: false
-    serviceUrl:
+    serviceUrl: 
       defaultZone: ${EUREKA_URL:http://user:BimBumBam_2018@localhost:8761/eureka/} 
-      
-#GET /eureka/apps = Visualizza i dettagli delle app registrate
-#GET /eureka/apps/[appId] = Visualizza i dettagli di una specifica App
-#GET /eureka/apps/[appId]/[instanceID] =   Visualizza i dettagli di una specifica App e di una specifica istanza
-
 
 # ==============================================================
 # = Security Parameters
 # ============================================================== 
-  sicurezza:
-    userpwd: BimBumBam_2018
-    adminpwd: MagicaBula_2018  
+sicurezza:
+  userpwd: 'BimBumBam_2018'
+  adminpwd: 'MagicaBula_2018'  
   
 # ==============================================================
 # = Logs Parameters
@@ -50,4 +46,13 @@ logging:
       springframework:
         security: INFO
         cloud: DEBUG
-    
+
+# ==============================================================
+# = Eureka Endpoints
+# ==============================================================        
+#GET /eureka/apps = visualizza i dettagli di tutte le istanze delle app registrate
+#GET /eureka/apps/[appID] = visualizza i dettagli di una specifica app
+#GET /eureka/apps/[appID]/[instanceID] = visualizza i dettagli di una istanza di una specifica app
+#PUT /eureka/apps/[appID]/[instanceID] = Invia un heartbeat ad una specifica istanza  di una app
+#DELETE /eureka/apps/[appID]/[instanceID] = Elimina una specifica istanza della app selezionata
+#POST /eureka/apps/[appID] = aggiunge una istanza della app selezionata
