@@ -60,7 +60,7 @@ spring:
       platform: postgres
   datasource:
     password: 123_Stella
-    url: jdbc:postgresql://localhost:5433/Alphashop
+    url: jdbc:postgresql://localhost:5433/AlphaShop
     username: postgres
   jpa:
     hibernate:
@@ -81,7 +81,7 @@ logging:
 # = Parametri Sicurezza OAUTH2 con KeyCloack 
 # ==============================================================
 keycloak:
-  auth-server-url: http://localhost:8080/auth
+  auth-server-url: http://localhost:9080/auth
   realm: Alphashop
   resource: PriceArtService
   public-client: true 
