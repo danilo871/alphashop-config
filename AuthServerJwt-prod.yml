@@ -1,0 +1,47 @@
+# ==============================================================
+# = Auth Server JWT - Versione Produzione
+# ==============================================================
+
+server:
+  port: 910${seq}
+
+# ==============================================================
+# = Parametri Servizio gestUser
+# ==============================================================
+gestuser:
+  srvUrl: http://localhost:8019/api/utenti/cerca/userid/
+  userId: ReadUser
+  password: BimBumBam_2018
+
+# ==============================================================
+# = Parametri Sicurezza JWT 
+# ==============================================================
+sicurezza:
+    uri: /auth
+    refresh: /refresh
+    header: Authorization
+    prefix: Bearer 
+    expiration: 300
+    secret: $123_Stella@xantrix.it
+
+# ==============================================================
+# = Proprietà Livello Log
+# = Default ERROR, WARN e INFO 
+# = Levels: TRACE, DEBUG, INFO, WARN, ERROR, FATAL, OFF
+# ============================================================== 
+logging:
+  file:
+    name: './logs/AuthSrvJwt.log' #file inserito nella cartella logs 
+    max-size: 1MB
+    #path: "/logs"
+  pattern:
+    file: "%d{ dd-MM-yyyy } [%thread] %-5level %logger{36} - %msg%n"
+    #console: "%d{dd-MM-yyyy HH:mm:ss} - %msg%n" 
+  level:
+    io:
+      github:
+        resilience4j: DEBUG
+    org:
+      springframework:
+        cloud: DEBUG
+        security: DEBUG
